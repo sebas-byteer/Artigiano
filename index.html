@@ -7,11 +7,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Artigiano | Panificados Artesanales en General Rodríguez</title>
+    <title>Artigiano | Panificados Artesanales</title>
 
     <meta
         name="description"
-        content="Artigiano - Panificados artesanales en General Rodríguez. Alfajores, medialunas, pastafrolas, pan lactal, tartas, pan dulce, sorrentinos, pizzetas, bandejitas surtidas, tortas y budines."
+        content="Artigiano - Panificados artesanales en General Rodríguez. Productos artesanales, catering y ventas al por mayor."
     >
 
     <meta
@@ -38,6 +38,11 @@
             line-height: 1.6;
         }
 
+
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #fffaf3;
             border-bottom: 1px solid #e5ddd2;
@@ -50,6 +55,7 @@
             max-width: 1100px;
             margin: auto;
             padding: 18px 25px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -80,15 +86,21 @@
         }
 
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 550px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             padding: 70px 25px;
+
             background: #eee5d8;
         }
 
@@ -96,57 +108,83 @@
             max-width: 750px;
         }
 
-        /* LOGO REDONDO */
-
         .logo-hero {
             width: 230px;
             height: 230px;
+
             max-width: 80%;
+
             object-fit: cover;
+
             border-radius: 50%;
+
             display: block;
+
             margin: 0 auto 25px;
+
             border: 5px solid #fffaf3;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.12);
         }
 
         .hero h2 {
             font-size: 25px;
             font-weight: normal;
+
             color: #76533b;
+
             margin-bottom: 20px;
         }
 
         .hero p {
             max-width: 650px;
+
             margin: auto;
+
             color: #5c5149;
+
             font-size: 17px;
         }
 
         .wholesale {
             margin-top: 18px !important;
+
             font-weight: bold;
+
             color: #65442d !important;
+
             font-size: 16px !important;
         }
 
+
+        /* =========================
+           BOTONES
+        ========================= */
+
         .buttons {
             margin-top: 30px;
+
             display: flex;
             justify-content: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .button {
             display: inline-block;
+
             padding: 13px 25px;
+
             border-radius: 6px;
+
             text-decoration: none;
+
             font-weight: bold;
+
             transition: 0.2s;
-            cursor: pointer;
         }
 
         .button-primary {
@@ -160,142 +198,90 @@
 
         .button-secondary {
             border: 1px solid #65442d;
+
             color: #65442d;
+
             background: transparent;
         }
 
         .button-secondary:hover {
             background: #65442d;
+
             color: white;
         }
 
 
-        /* SECCIONES */
+        /* =========================
+           PRODUCTOS DESTACADOS
+        ========================= */
 
-        section {
+        .products {
+            background: #fffaf4;
+
             padding: 70px 25px;
         }
 
         .container {
             max-width: 1100px;
+
             margin: auto;
         }
 
         .section-title {
             text-align: center;
+
             font-size: 32px;
+
             color: #543522;
+
             margin-bottom: 12px;
         }
 
         .section-description {
             text-align: center;
+
             max-width: 650px;
+
             margin: 0 auto 40px;
+
             color: #6b625b;
         }
 
-
-        /* PRODUCTOS */
-
-        .products {
-            background: #fffaf4;
-        }
-
-        .product-grid {
+        .featured-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+
+            max-width: 800px;
+
+            margin: auto;
         }
 
         .product-card {
             background: #f7f3ed;
+
             border: 1px solid #e5ddd2;
+
             border-radius: 10px;
+
             overflow: hidden;
+
             text-align: center;
-            transition: 0.2s;
         }
 
-        .product-card:hover {
-            transform: translateY(-3px);
-        }
-
-
-        /* CARRUSEL */
-
-        .carousel {
-            position: relative;
+        .product-image {
             width: 100%;
-            height: 230px;
-            background: #e8dfd4;
-            overflow: hidden;
-        }
 
-        .carousel img {
-            width: 100%;
-            height: 100%;
+            height: 280px;
+
             object-fit: cover;
+
             object-position: center;
+
             display: block;
-        }
-
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 38px;
-            height: 38px;
-            border: none;
-            border-radius: 50%;
-            background: rgba(255, 250, 243, 0.9);
-            color: #65442d;
-            font-size: 25px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 5;
-            transition: 0.2s;
-        }
-
-        .carousel-button:hover {
-            background: white;
-            transform: translateY(-50%) scale(1.05);
-        }
-
-        .carousel-prev {
-            left: 10px;
-        }
-
-        .carousel-next {
-            right: 10px;
-        }
-
-        .carousel-dots {
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-            z-index: 5;
-        }
-
-        .carousel-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            border: none;
-            background: rgba(255, 255, 255, 0.65);
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .carousel-dot.active {
-            background: white;
-            transform: scale(1.2);
         }
 
         .product-info {
@@ -304,83 +290,116 @@
 
         .product-card h3 {
             color: #60422e;
+
             margin-bottom: 8px;
+
             font-size: 20px;
         }
 
         .product-card p {
             color: #6b625b;
+
             font-size: 15px;
         }
 
-        .more-card {
-            margin-top: 35px;
+        .more-products {
             text-align: center;
+
+            margin-top: 35px;
         }
 
 
-        /* CATERING */
+        /* =========================
+           CATERING
+        ========================= */
 
         .catering {
             background: #eee5d8;
+
+            padding: 70px 25px;
         }
 
         .catering-content {
             max-width: 750px;
+
             margin: auto;
+
             text-align: center;
         }
 
         .catering-content p {
             color: #5f554d;
+
             margin-bottom: 25px;
         }
 
 
-        /* CONTACTO */
+        /* =========================
+           CONTACTO
+        ========================= */
 
         .contact {
             background: #fffaf4;
+
+            padding: 70px 25px;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 20px;
         }
 
         .contact-card {
             border: 1px solid #e5ddd2;
+
             border-radius: 10px;
+
             padding: 25px;
+
             text-align: center;
+
             background: #f7f3ed;
         }
 
         .contact-card h3 {
             color: #60422e;
+
             margin-bottom: 8px;
         }
 
         .contact-card a {
             color: #76533b;
+
             text-decoration: none;
+
             word-break: break-word;
         }
 
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #543522;
+
             color: #eee5d8;
+
             text-align: center;
+
             padding: 25px;
+
             font-size: 14px;
         }
 
 
-        /* CELULAR */
+        /* =========================
+           CELULARES
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -390,6 +409,7 @@
 
             .logo-hero {
                 width: 190px;
+
                 height: 190px;
             }
 
@@ -397,22 +417,13 @@
                 font-size: 21px;
             }
 
-            .product-grid,
+            .featured-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
             }
 
             section {
                 padding: 55px 20px;
-            }
-
-            .carousel {
-                height: 270px;
-            }
-
-            .carousel-button {
-                width: 36px;
-                height: 36px;
             }
 
         }
@@ -425,853 +436,444 @@
 <body>
 
 
-    <!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
-    <header>
+<header>
 
-        <nav class="navbar">
+    <nav class="navbar">
 
-            <div class="logo">
-                Artigiano
-            </div>
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#inicio">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="#productos">Productos</a>
-                </li>
-
-                <li>
-                    <a href="#catering">Catering</a>
-                </li>
-
-                <li>
-                    <a href="#contacto">Contacto</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-    <!-- INICIO -->
-
-    <section class="hero" id="inicio">
-
-        <div class="hero-content">
-
-            <img
-                src="images/logoartigiano.jpeg"
-                alt="Logo de Artigiano"
-                class="logo-hero"
-            >
-
-            <h2>
-                Panificados artesanales
-            </h2>
-
-            <p>
-                Productos elaborados con dedicación para acompañarte
-                en cada momento. Panificados, opciones dulces y
-                servicios de catering.
-            </p>
-
-            <p class="wholesale">
-                Realizamos ventas al por mayor.
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button button-primary"
-                    href="https://wa.me/5491153485649"
-                    target="_blank"
-                >
-                    Contactar por WhatsApp
-                </a>
-
-                <a
-                    class="button button-secondary"
-                    href="#productos"
-                >
-                    Ver productos
-                </a>
-
-            </div>
-
+        <div class="logo">
+            Artigiano
         </div>
 
-    </section>
-
-
-    <!-- PRODUCTOS -->
-
-    <section class="products" id="productos">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Nuestros productos
-            </h2>
-
-            <p class="section-description">
-                Conocé nuestra variedad de productos artesanales.
-                Consultanos por disponibilidad y ventas al por mayor.
-            </p>
-
-            <div class="product-grid">
-
-
-                <!-- ALFAJORES ARTESANALES -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/alfajor1.jpeg"
-                    >
-
-                        <img
-                            src="images/alfajor1.jpeg"
-                            alt="Alfajores artesanales Artigiano"
-                        >
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Alfajores artesanales
-                        </h3>
-
-                        <p>
-                            Alfajores artesanales elaborados con dedicación.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ALFAJORES DE MAICENA -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/alfajordemaicena1.jpeg"
-                    >
-
-                        <img
-                            src="images/alfajordemaicena1.jpeg"
-                            alt="Alfajores de maicena Artigiano"
-                        >
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Alfajores de maicena
-                        </h3>
-
-                        <p>
-                            Clásicos alfajores de maicena artesanales.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MEDIALUNAS -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/medialunas1.jpeg,images/medialunas2.jpeg"
-                    >
-
-                        <img
-                            src="images/medialunas1.jpeg"
-                            alt="Medialunas artesanales Artigiano"
-                        >
-
-                        <button
-                            class="carousel-button carousel-prev"
-                            onclick="changeSlide(this, -1)"
-                        >
-                            ‹
-                        </button>
-
-                        <button
-                            class="carousel-button carousel-next"
-                            onclick="changeSlide(this, 1)"
-                        >
-                            ›
-                        </button>
-
-                        <div class="carousel-dots"></div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Medialunas
-                        </h3>
-
-                        <p>
-                            Medialunas artesanales ideales para desayunos,
-                            meriendas y eventos.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PASTAFROLAS -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/pastafrola1.jpeg,images/pastafrola2.jpeg"
-                    >
-
-                        <img
-                            src="images/pastafrola1.jpeg"
-                            alt="Pastafrolas artesanales Artigiano"
-                        >
-
-                        <button
-                            class="carousel-button carousel-prev"
-                            onclick="changeSlide(this, -1)"
-                        >
-                            ‹
-                        </button>
-
-                        <button
-                            class="carousel-button carousel-next"
-                            onclick="changeSlide(this, 1)"
-                        >
-                            ›
-                        </button>
-
-                        <div class="carousel-dots"></div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Pastafrolas
-                        </h3>
-
-                        <p>
-                            Pastafrolas artesanales para disfrutar
-                            en cualquier momento.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PAN LACTAL -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/panlactal1.jpeg,images/panlactal2.jpeg,images/panlactal3.jpeg,images/panlactal4.jpeg,images/panlactal6.jpeg,images/panlactal7.jpeg,images/panlactal8.jpeg"
-                    >
-
-                        <img
-                            src="images/panlactal1.jpeg"
-                            alt="Pan lactal artesanal Artigiano"
-                        >
-
-                        <button
-                            class="carousel-button carousel-prev"
-                            onclick="changeSlide(this, -1)"
-                        >
-                            ‹
-                        </button>
-
-                        <button
-                            class="carousel-button carousel-next"
-                            onclick="changeSlide(this, 1)"
-                        >
-                            ›
-                        </button>
-
-                        <div class="carousel-dots"></div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Pan lactal
-                        </h3>
-
-                        <p>
-                            Pan lactal artesanal para acompañar
-                            tus comidas de todos los días.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- TARTAS -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/tartas1.jpeg,images/tartas2.jpeg,images/tartas3.jpeg"
-                    >
-
-                        <img
-                            src="images/tartas1.jpeg"
-                            alt="Tartas artesanales Artigiano"
-                        >
-
-                        <button
-                            class="carousel-button carousel-prev"
-                            onclick="changeSlide(this, -1)"
-                        >
-                            ‹
-                        </button>
-
-                        <button
-                            class="carousel-button carousel-next"
-                            onclick="changeSlide(this, 1)"
-                        >
-                            ›
-                        </button>
-
-                        <div class="carousel-dots"></div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Tartas
-                        </h3>
-
-                        <p>
-                            Tartas artesanales para compartir
-                            en cualquier ocasión.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PAN DULCE -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/pandulce1.jpeg"
-                    >
-
-                        <img
-                            src="images/pandulce1.jpeg"
-                            alt="Pan dulce artesanal Artigiano"
-                        >
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Pan dulce
-                        </h3>
-
-                        <p>
-                            Pan dulce artesanal para disfrutar
-                            en ocasiones especiales.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- SORRENTINOS -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/sorrentinos1.jpeg"
-                    >
-
-                        <img
-                            src="images/sorrentinos1.jpeg"
-                            alt="Sorrentinos artesanales Artigiano"
-                        >
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Sorrentinos
-                        </h3>
-
-                        <p>
-                            Pasta artesanal preparada para disfrutar
-                            en casa.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PIZZETAS -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/pizzetas1.jpeg"
-                    >
-
-                        <img
-                            src="images/pizzetas1.jpeg"
-                            alt="Pizzetas artesanales Artigiano"
-                        >
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Pizzetas
-                        </h3>
-
-                        <p>
-                            Pizzetas artesanales ideales para compartir
-                            o disfrutar en cualquier momento.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- BANDEJITAS SURTIDAS -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/bandejitas1.jpeg,images/bandejitas2.jpeg,images/bandejitas3.jpeg"
-                    >
-
-                        <img
-                            src="images/bandejitas1.jpeg"
-                            alt="Bandejitas surtidas Artigiano"
-                        >
-
-                        <button
-                            class="carousel-button carousel-prev"
-                            onclick="changeSlide(this, -1)"
-                        >
-                            ‹
-                        </button>
-
-                        <button
-                            class="carousel-button carousel-next"
-                            onclick="changeSlide(this, 1)"
-                        >
-                            ›
-                        </button>
-
-                        <div class="carousel-dots"></div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Bandejitas surtidas
-                        </h3>
-
-                        <p>
-                            Variedad de productos seleccionados
-                            para compartir.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- TORTAS -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/tortas1.jpeg,images/tortas2.jpeg,images/tortas3.jpeg"
-                    >
-
-                        <img
-                            src="images/tortas1.jpeg"
-                            alt="Tortas artesanales Artigiano"
-                        >
-
-                        <button
-                            class="carousel-button carousel-prev"
-                            onclick="changeSlide(this, -1)"
-                        >
-                            ‹
-                        </button>
-
-                        <button
-                            class="carousel-button carousel-next"
-                            onclick="changeSlide(this, 1)"
-                        >
-                            ›
-                        </button>
-
-                        <div class="carousel-dots"></div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Tortas
-                        </h3>
-
-                        <p>
-                            Tortas artesanales ideales para
-                            celebraciones y momentos especiales.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- BUDINES -->
-
-                <div class="product-card">
-
-                    <div
-                        class="carousel"
-                        data-images="images/budin1.jpeg,images/budin2.jpeg"
-                    >
-
-                        <img
-                            src="images/budin1.jpeg"
-                            alt="Budines artesanales Artigiano"
-                        >
-
-                        <button
-                            class="carousel-button carousel-prev"
-                            onclick="changeSlide(this, -1)"
-                        >
-                            ‹
-                        </button>
-
-                        <button
-                            class="carousel-button carousel-next"
-                            onclick="changeSlide(this, 1)"
-                        >
-                            ›
-                        </button>
-
-                        <div class="carousel-dots"></div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Budines
-                        </h3>
-
-                        <p>
-                            Budines artesanales para desayunos,
-                            meriendas y reuniones.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- CONSULTA -->
-
-            <div class="more-card">
-
-                <p class="section-description">
-                    ¿Buscás otro producto o querés realizar
-                    un pedido al por mayor?
-                </p>
-
-                <a
-                    class="button button-primary"
-                    href="https://wa.me/5491153485649"
-                    target="_blank"
-                >
-                    Consultar por WhatsApp
+        <ul class="nav-links">
+
+            <li>
+                <a href="#inicio">
+                    Inicio
                 </a>
+            </li>
 
-            </div>
+            <!-- ESTE SIGUE BAJANDO A PRODUCTOS DESTACADOS -->
 
-        </div>
+            <li>
+                <a href="#productos">
+                    Productos
+                </a>
+            </li>
 
-    </section>
+            <li>
+                <a href="#catering">
+                    Catering
+                </a>
+            </li>
+
+            <li>
+                <a href="#contacto">
+                    Contacto
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
 
 
-    <!-- CATERING -->
+<!-- =========================
+     INICIO
+========================= -->
 
-    <section class="catering" id="catering">
+<section class="hero" id="inicio">
 
-        <div class="catering-content">
+    <div class="hero-content">
 
-            <h2 class="section-title">
-                Servicio de catering
-            </h2>
 
-            <p>
-                Organizá tu evento con opciones de panificados
-                y productos preparados para compartir.
-            </p>
+        <!-- LOGO -->
 
-            <p>
-                Consultanos para conocer las opciones disponibles
-                y armar una propuesta según tu evento.
-            </p>
+        <img
+            src="images/logoartigiano.jpeg"
+            alt="Logo de Artigiano"
+            class="logo-hero"
+        >
+
+
+        <h2>
+            Panificados artesanales
+        </h2>
+
+
+        <p>
+
+            Productos elaborados con dedicación
+            para acompañarte en cada momento.
+
+            Panificados, opciones dulces
+            y servicios de catering.
+
+        </p>
+
+
+        <p class="wholesale">
+
+            Realizamos ventas al por mayor.
+
+        </p>
+
+
+        <div class="buttons">
+
+
+            <!-- WHATSAPP -->
 
             <a
                 class="button button-primary"
                 href="https://wa.me/5491153485649"
                 target="_blank"
             >
-                Consultar catering
+
+                Contactar por WhatsApp
+
             </a>
+
+
+            <!-- AHORA LLEVA A LA SUBPÁGINA -->
+
+            <a
+                class="button button-secondary"
+                href="productos.html"
+            >
+
+                Ver productos
+
+            </a>
+
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- CONTACTO -->
+<!-- =========================
+     PRODUCTOS DESTACADOS
+========================= -->
 
-    <section class="contact" id="contacto">
+<section
+    class="products"
+    id="productos"
+>
 
-        <div class="container">
-
-            <h2 class="section-title">
-                Contactanos
-            </h2>
-
-            <p class="section-description">
-                Estamos en General Rodríguez. Podés comunicarte
-                directamente con nosotros para realizar consultas,
-                pedidos o ventas al por mayor.
-            </p>
-
-            <div class="contact-grid">
+    <div class="container">
 
 
-                <div class="contact-card">
+        <h2 class="section-title">
+
+            Productos destacados
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Conocé algunos de nuestros productos.
+            Para ver el catálogo completo,
+            ingresá a nuestra sección de productos.
+
+        </p>
+
+
+        <div class="featured-grid">
+
+
+            <!-- PRODUCTO 1 -->
+
+            <div class="product-card">
+
+
+                <img
+                    src="images/alfajor1.jpeg"
+                    alt="Alfajores artesanales"
+                    class="product-image"
+                >
+
+
+                <div class="product-info">
+
 
                     <h3>
-                        WhatsApp
+
+                        Alfajores artesanales
+
                     </h3>
 
-                    <a
-                        href="https://wa.me/5491153485649"
-                        target="_blank"
-                    >
-                        +54 9 11 5348-5649
-                    </a>
-
-                </div>
-
-
-                <div class="contact-card">
-
-                    <h3>
-                        Instagram
-                    </h3>
-
-                    <a
-                        href="https://www.instagram.com/artigiano_panaderia/"
-                        target="_blank"
-                    >
-                        @artigiano_panaderia
-                    </a>
-
-                </div>
-
-
-                <div class="contact-card">
-
-                    <h3>
-                        Dirección
-                    </h3>
 
                     <p>
-                        Batallón San Nicolás de los Arroyos 80<br>
-                        General Rodríguez
+
+                        Alfajores artesanales
+                        elaborados con dedicación.
+
                     </p>
+
 
                 </div>
 
 
             </div>
 
+
+            <!-- PRODUCTO 2 -->
+
+            <div class="product-card">
+
+
+                <img
+                    src="images/medialunas1.jpeg"
+                    alt="Medialunas artesanales"
+                    class="product-image"
+                >
+
+
+                <div class="product-info">
+
+
+                    <h3>
+
+                        Medialunas
+
+                    </h3>
+
+
+                    <p>
+
+                        Medialunas artesanales
+                        ideales para desayunos,
+                        meriendas y eventos.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
         </div>
 
-    </section>
+
+        <!-- VER MÁS -->
+
+        <div class="more-products">
 
 
-    <!-- FOOTER -->
+            <a
+                href="productos.html"
+                class="button button-primary"
+            >
 
-    <footer>
+                Ver más productos
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATERING
+========================= -->
+
+<section
+    class="catering"
+    id="catering"
+>
+
+    <div class="catering-content">
+
+
+        <h2 class="section-title">
+
+            Servicio de catering
+
+        </h2>
+
 
         <p>
-            © 2026 Artigiano. Todos los derechos reservados.
+
+            Organizá tu evento con opciones
+            de panificados y productos
+            preparados para compartir.
+
         </p>
 
-    </footer>
+
+        <p>
+
+            Consultanos para conocer
+            las opciones disponibles
+            y armar una propuesta
+            según tu evento.
+
+        </p>
 
 
-    <!-- JAVASCRIPT DEL CARRUSEL -->
+        <a
+            class="button button-primary"
+            href="https://wa.me/5491153485649"
+            target="_blank"
+        >
 
-    <script>
+            Consultar catering
 
-        function initializeCarousels() {
-
-            const carousels =
-                document.querySelectorAll(".carousel");
-
-            carousels.forEach(function(carousel) {
-
-                const images =
-                    carousel.dataset.images.split(",");
-
-                carousel.dataset.current = "0";
-
-                const dotsContainer =
-                    carousel.querySelector(".carousel-dots");
-
-                if (!dotsContainer || images.length <= 1) {
-                    return;
-                }
-
-                images.forEach(function(image, index) {
-
-                    const dot =
-                        document.createElement("button");
-
-                    dot.className = "carousel-dot";
-
-                    if (index === 0) {
-                        dot.classList.add("active");
-                    }
-
-                    dot.addEventListener("click", function() {
-
-                        showSlide(
-                            carousel,
-                            index
-                        );
-
-                    });
-
-                    dotsContainer.appendChild(dot);
-
-                });
-
-            });
-
-        }
+        </a>
 
 
-        function showSlide(carousel, index) {
+    </div>
 
-            const images =
-                carousel.dataset.images.split(",");
-
-            const imageElement =
-                carousel.querySelector("img");
-
-            if (index < 0) {
-                index = images.length - 1;
-            }
-
-            if (index >= images.length) {
-                index = 0;
-            }
-
-            carousel.dataset.current = index;
-
-            imageElement.src =
-                images[index];
-
-            const dots =
-                carousel.querySelectorAll(".carousel-dot");
-
-            dots.forEach(function(dot, dotIndex) {
-
-                dot.classList.toggle(
-                    "active",
-                    dotIndex === index
-                );
-
-            });
-
-        }
+</section>
 
 
-        function changeSlide(button, direction) {
+<!-- =========================
+     CONTACTO
+========================= -->
 
-            const carousel =
-                button.closest(".carousel");
+<section
+    class="contact"
+    id="contacto"
+>
 
-            const current =
-                parseInt(carousel.dataset.current);
-
-            showSlide(
-                carousel,
-                current + direction
-            );
-
-        }
+    <div class="container">
 
 
-        initializeCarousels();
+        <h2 class="section-title">
 
-    </script>
+            Contactanos
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Estamos en General Rodríguez.
+            Podés comunicarte directamente
+            con nosotros para realizar consultas,
+            pedidos o ventas al por mayor.
+
+        </p>
+
+
+        <div class="contact-grid">
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-card">
+
+
+                <h3>
+
+                    WhatsApp
+
+                </h3>
+
+
+                <a
+                    href="https://wa.me/5491153485649"
+                    target="_blank"
+                >
+
+                    +54 9 11 5348-5649
+
+                </a>
+
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="contact-card">
+
+
+                <h3>
+
+                    Instagram
+
+                </h3>
+
+
+                <a
+                    href="https://www.instagram.com/artigiano_panaderia/"
+                    target="_blank"
+                >
+
+                    @artigiano_panaderia
+
+                </a>
+
+
+            </div>
+
+
+            <!-- DIRECCIÓN -->
+
+            <div class="contact-card">
+
+
+                <h3>
+
+                    Dirección
+
+                </h3>
+
+
+                <p>
+
+                    Batallón San Nicolás
+                    de los Arroyos 80
+
+                    <br>
+
+                    General Rodríguez
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 Artigiano.
+        Todos los derechos reservados.
+
+    </p>
+
+</footer>
+
 
 </body>
 
