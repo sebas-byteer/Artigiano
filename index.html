@@ -6,11 +6,12 @@
 
     <title>Artigiano | Panificados Artesanales en General Rodríguez</title>
 
-    <meta name="description" content="Artigiano - Panificados artesanales en General Rodríguez. Alfajores, medialunas, pastafrolas, pan lactal, tartas, pan dulce, sorrentinos, pizzetas, bandejitas surtidas, palmeritas y budines.">
+    <meta name="description" content="Artigiano - Panificados artesanales en General Rodríguez. Alfajores, alfajores de maicena, medialunas, pastafrolas, pan lactal, tartas, pan dulce, sorrentinos, pizzetas, bandejitas surtidas, tortas y budines.">
 
     <meta name="google-site-verification" content="v20n2kQW8Afo2m4hXBQFqn0dFnqSgHJ2S2PbZVGPcWw">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -27,8 +28,6 @@
             color: #333;
             line-height: 1.6;
         }
-
-        /* HEADER */
 
         header {
             background: #fffaf3;
@@ -91,10 +90,8 @@
             width: 300px;
             max-width: 80%;
             height: auto;
-            margin-bottom: 20px;
+            margin: 0 auto 20px;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .hero h2 {
@@ -206,22 +203,79 @@
             transform: translateY(-3px);
         }
 
-        .product-image {
+        /* CARRUSEL */
+
+        .carousel {
+            position: relative;
             width: 100%;
-            height: 210px;
+            height: 230px;
             background: #e8dfd4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8b7b6d;
-            font-size: 14px;
+            overflow: hidden;
         }
 
-        .product-image img {
+        .carousel img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 38px;
+            height: 38px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 250, 243, 0.9);
+            color: #65442d;
+            font-size: 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            transition: 0.2s;
+        }
+
+        .carousel-button:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            z-index: 5;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.65);
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .carousel-dot.active {
+            background: white;
+            transform: scale(1.2);
         }
 
         .product-info {
@@ -327,10 +381,16 @@
                 padding: 55px 20px;
             }
 
-            .product-image {
-                height: 230px;
+            .carousel {
+                height: 270px;
+            }
+
+            .carousel-button {
+                width: 36px;
+                height: 36px;
             }
         }
+
     </style>
 </head>
 
@@ -339,6 +399,7 @@
     <!-- HEADER -->
 
     <header>
+
         <nav class="navbar">
 
             <div class="logo">
@@ -346,13 +407,27 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#catering">Catering</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#productos">Productos</a>
+                </li>
+
+                <li>
+                    <a href="#catering">Catering</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+
             </ul>
 
         </nav>
+
     </header>
 
 
@@ -363,11 +438,13 @@
         <div class="hero-content">
 
             <img
-                src="images/logoartigiano.png"
+                src="images/logoartigiano.jfif"
                 alt="Logo de Artigiano"
                 class="logo-hero">
 
-            <h2>Panificados artesanales</h2>
+            <h2>
+                Panificados artesanales
+            </h2>
 
             <p>
                 Productos elaborados con dedicación para acompañarte
@@ -419,20 +496,57 @@
             <div class="product-grid">
 
 
-                <!-- ALFAJORES -->
+                <!-- ALFAJORES ARTESANALES -->
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de alfajores</span>
+                    <div class="carousel"
+                        data-images="images/alfajor1.jpeg">
+
+                        <img
+                            src="images/alfajor1.jpeg"
+                            alt="Alfajores artesanales Artigiano">
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Alfajores artesanales</h3>
+
+                        <h3>
+                            Alfajores artesanales
+                        </h3>
 
                         <p>
                             Alfajores artesanales elaborados con dedicación.
                         </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ALFAJORES DE MAICENA -->
+
+                <div class="product-card">
+
+                    <div class="carousel"
+                        data-images="images/alfajordemaicena1.jpeg">
+
+                        <img
+                            src="images/alfajordemaicena1.jpeg"
+                            alt="Alfajores de maicena Artigiano">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Alfajores de maicena
+                        </h3>
+
+                        <p>
+                            Clásicos alfajores de maicena artesanales.
+                        </p>
+
                     </div>
 
                 </div>
@@ -442,17 +556,40 @@
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de medialunas</span>
+                    <div class="carousel"
+                        data-images="images/medialunas1.jpeg,images/medialunas2.jpeg">
+
+                        <img
+                            src="images/medialunas1.jpeg"
+                            alt="Medialunas artesanales Artigiano">
+
+                        <button
+                            class="carousel-button carousel-prev"
+                            onclick="changeSlide(this, -1)">
+                            ‹
+                        </button>
+
+                        <button
+                            class="carousel-button carousel-next"
+                            onclick="changeSlide(this, 1)">
+                            ›
+                        </button>
+
+                        <div class="carousel-dots"></div>
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Medialunas</h3>
+
+                        <h3>
+                            Medialunas
+                        </h3>
 
                         <p>
                             Medialunas artesanales ideales para desayunos,
                             meriendas y eventos.
                         </p>
+
                     </div>
 
                 </div>
@@ -462,17 +599,40 @@
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de pastafrola</span>
+                    <div class="carousel"
+                        data-images="images/pastafrola1.jpeg,images/pastafrola2.jpeg">
+
+                        <img
+                            src="images/pastafrola1.jpeg"
+                            alt="Pastafrolas artesanales Artigiano">
+
+                        <button
+                            class="carousel-button carousel-prev"
+                            onclick="changeSlide(this, -1)">
+                            ‹
+                        </button>
+
+                        <button
+                            class="carousel-button carousel-next"
+                            onclick="changeSlide(this, 1)">
+                            ›
+                        </button>
+
+                        <div class="carousel-dots"></div>
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Pastafrolas</h3>
+
+                        <h3>
+                            Pastafrolas
+                        </h3>
 
                         <p>
                             Pastafrolas artesanales para disfrutar
                             en cualquier momento.
                         </p>
+
                     </div>
 
                 </div>
@@ -482,17 +642,40 @@
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de pan lactal</span>
+                    <div class="carousel"
+                        data-images="images/panlactal1.jpeg,images/panlactal2.jpeg,images/panlactal3.jpeg,images/panlactal4.jpeg,images/panlactal6.jpeg,images/panlactal7.jpeg,images/panlactal8.jpeg">
+
+                        <img
+                            src="images/panlactal1.jpeg"
+                            alt="Pan lactal artesanal Artigiano">
+
+                        <button
+                            class="carousel-button carousel-prev"
+                            onclick="changeSlide(this, -1)">
+                            ‹
+                        </button>
+
+                        <button
+                            class="carousel-button carousel-next"
+                            onclick="changeSlide(this, 1)">
+                            ›
+                        </button>
+
+                        <div class="carousel-dots"></div>
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Pan lactal</h3>
+
+                        <h3>
+                            Pan lactal
+                        </h3>
 
                         <p>
                             Pan lactal artesanal para acompañar
                             tus comidas de todos los días.
                         </p>
+
                     </div>
 
                 </div>
@@ -502,17 +685,40 @@
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de tartas</span>
+                    <div class="carousel"
+                        data-images="images/tartas1.jpeg,images/tartas2.jpeg,images/tartas3.jpeg">
+
+                        <img
+                            src="images/tartas1.jpeg"
+                            alt="Tartas artesanales Artigiano">
+
+                        <button
+                            class="carousel-button carousel-prev"
+                            onclick="changeSlide(this, -1)">
+                            ‹
+                        </button>
+
+                        <button
+                            class="carousel-button carousel-next"
+                            onclick="changeSlide(this, 1)">
+                            ›
+                        </button>
+
+                        <div class="carousel-dots"></div>
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Tartas</h3>
+
+                        <h3>
+                            Tartas
+                        </h3>
 
                         <p>
                             Tartas artesanales para compartir
                             en cualquier ocasión.
                         </p>
+
                     </div>
 
                 </div>
@@ -522,17 +728,26 @@
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de pan dulce</span>
+                    <div class="carousel"
+                        data-images="images/pandulce1.jpeg">
+
+                        <img
+                            src="images/pandulce1.jpeg"
+                            alt="Pan dulce artesanal Artigiano">
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Pan dulce</h3>
+
+                        <h3>
+                            Pan dulce
+                        </h3>
 
                         <p>
                             Pan dulce artesanal para disfrutar
                             en ocasiones especiales.
                         </p>
+
                     </div>
 
                 </div>
@@ -542,17 +757,26 @@
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de sorrentinos</span>
+                    <div class="carousel"
+                        data-images="images/sorrentinos1.jpeg">
+
+                        <img
+                            src="images/sorrentinos1.jpeg"
+                            alt="Sorrentinos artesanales Artigiano">
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Sorrentinos</h3>
+
+                        <h3>
+                            Sorrentinos
+                        </h3>
 
                         <p>
                             Pasta artesanal preparada para disfrutar
                             en casa.
                         </p>
+
                     </div>
 
                 </div>
@@ -562,57 +786,112 @@
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de pizzetas</span>
+                    <div class="carousel"
+                        data-images="images/pizzetas1.jpeg">
+
+                        <img
+                            src="images/pizzetas1.jpeg"
+                            alt="Pizzetas artesanales Artigiano">
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Pizzetas</h3>
+
+                        <h3>
+                            Pizzetas
+                        </h3>
 
                         <p>
                             Pizzetas artesanales ideales para compartir
                             o disfrutar en cualquier momento.
                         </p>
+
                     </div>
 
                 </div>
 
 
-                <!-- BANDEJITAS -->
+                <!-- BANDEJITAS SURTIDAS -->
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de bandejitas surtidas</span>
+                    <div class="carousel"
+                        data-images="images/bandejitas1.jpeg,images/bandejitas2.jpeg,images/bandejitas3.jpeg">
+
+                        <img
+                            src="images/bandejitas1.jpeg"
+                            alt="Bandejitas surtidas Artigiano">
+
+                        <button
+                            class="carousel-button carousel-prev"
+                            onclick="changeSlide(this, -1)">
+                            ‹
+                        </button>
+
+                        <button
+                            class="carousel-button carousel-next"
+                            onclick="changeSlide(this, 1)">
+                            ›
+                        </button>
+
+                        <div class="carousel-dots"></div>
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Bandejitas surtidas</h3>
+
+                        <h3>
+                            Bandejitas surtidas
+                        </h3>
 
                         <p>
                             Variedad de productos seleccionados
                             para compartir.
                         </p>
+
                     </div>
 
                 </div>
 
 
-                <!-- PALMERITAS -->
+                <!-- TORTAS -->
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de palmeritas</span>
+                    <div class="carousel"
+                        data-images="images/tortas1.jpeg,images/tortas2.jpeg,images/tortas3.jpeg">
+
+                        <img
+                            src="images/tortas1.jpeg"
+                            alt="Tortas artesanales Artigiano">
+
+                        <button
+                            class="carousel-button carousel-prev"
+                            onclick="changeSlide(this, -1)">
+                            ‹
+                        </button>
+
+                        <button
+                            class="carousel-button carousel-next"
+                            onclick="changeSlide(this, 1)">
+                            ›
+                        </button>
+
+                        <div class="carousel-dots"></div>
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Palmeritas</h3>
+
+                        <h3>
+                            Tortas
+                        </h3>
 
                         <p>
-                            Palmeritas artesanales ideales para
-                            acompañar el mate o el café.
+                            Tortas artesanales ideales para
+                            celebraciones y momentos especiales.
                         </p>
+
                     </div>
 
                 </div>
@@ -622,17 +901,40 @@
 
                 <div class="product-card">
 
-                    <div class="product-image">
-                        <span>Foto de budines</span>
+                    <div class="carousel"
+                        data-images="images/budin1.jpeg,images/budin2.jpeg">
+
+                        <img
+                            src="images/budin1.jpeg"
+                            alt="Budines artesanales Artigiano">
+
+                        <button
+                            class="carousel-button carousel-prev"
+                            onclick="changeSlide(this, -1)">
+                            ‹
+                        </button>
+
+                        <button
+                            class="carousel-button carousel-next"
+                            onclick="changeSlide(this, 1)">
+                            ›
+                        </button>
+
+                        <div class="carousel-dots"></div>
+
                     </div>
 
                     <div class="product-info">
-                        <h3>Budines</h3>
+
+                        <h3>
+                            Budines
+                        </h3>
 
                         <p>
                             Budines artesanales para desayunos,
                             meriendas y reuniones.
                         </p>
+
                     </div>
 
                 </div>
@@ -716,7 +1018,9 @@
 
                 <div class="contact-card">
 
-                    <h3>WhatsApp</h3>
+                    <h3>
+                        WhatsApp
+                    </h3>
 
                     <a
                         href="https://wa.me/5491153485649"
@@ -729,7 +1033,9 @@
 
                 <div class="contact-card">
 
-                    <h3>Instagram</h3>
+                    <h3>
+                        Instagram
+                    </h3>
 
                     <a
                         href="https://www.instagram.com/artigiano_panaderia/"
@@ -742,7 +1048,9 @@
 
                 <div class="contact-card">
 
-                    <h3>Dirección</h3>
+                    <h3>
+                        Dirección
+                    </h3>
 
                     <p>
                         Batallón San Nicolás de los Arroyos 80<br>
@@ -767,6 +1075,115 @@
         </p>
 
     </footer>
+
+
+    <!-- JAVASCRIPT DEL CARRUSEL -->
+
+    <script>
+
+        function initializeCarousels() {
+
+            const carousels =
+                document.querySelectorAll(".carousel");
+
+            carousels.forEach(function(carousel) {
+
+                const images =
+                    carousel.dataset.images.split(",");
+
+                carousel.dataset.current = "0";
+
+                const dotsContainer =
+                    carousel.querySelector(".carousel-dots");
+
+                if (!dotsContainer || images.length <= 1) {
+                    return;
+                }
+
+                images.forEach(function(image, index) {
+
+                    const dot =
+                        document.createElement("button");
+
+                    dot.className = "carousel-dot";
+
+                    if (index === 0) {
+                        dot.classList.add("active");
+                    }
+
+                    dot.addEventListener("click", function() {
+
+                        showSlide(
+                            carousel,
+                            index
+                        );
+
+                    });
+
+                    dotsContainer.appendChild(dot);
+
+                });
+
+            });
+
+        }
+
+
+        function showSlide(carousel, index) {
+
+            const images =
+                carousel.dataset.images.split(",");
+
+            const imageElement =
+                carousel.querySelector("img");
+
+            if (index < 0) {
+                index = images.length - 1;
+            }
+
+            if (index >= images.length) {
+                index = 0;
+            }
+
+            carousel.dataset.current = index;
+
+            imageElement.src =
+                images[index];
+
+            const dots =
+                carousel.querySelectorAll(".carousel-dot");
+
+            dots.forEach(function(dot, dotIndex) {
+
+                dot.classList.toggle(
+                    "active",
+                    dotIndex === index
+                );
+
+            });
+
+        }
+
+
+        function changeSlide(button, direction) {
+
+            const carousel =
+                button.closest(".carousel");
+
+            const current =
+                parseInt(carousel.dataset.current);
+
+            showSlide(
+                carousel,
+                current + direction
+            );
+
+        }
+
+
+        initializeCarousels();
+
+    </script>
 
 </body>
 </html>
