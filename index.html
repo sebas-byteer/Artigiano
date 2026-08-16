@@ -1,13 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="v20n2kQW8Afo2m4hXBQFqn0dFnqSgHJ2S2PbZVGPcWw" />
 
-    <title>Artigiano | Panificados Artesanales</title>
+    <title>Artigiano | Panificados Artesanales en General Rodríguez</title>
 
-    <meta name="description" content="Artigiano - Panificados artesanales, alfajores, sanguches de miga, ñoquis, pan árabe, catering y alimentos saludables en General Rodríguez.">
+    <meta name="description" content="Artigiano - Panificados artesanales en General Rodríguez. Alfajores, medialunas, pastafrolas, pan lactal, tartas, pan dulce, sorrentinos, pizzetas, bandejitas surtidas, palmeritas y budines.">
+
+    <meta name="google-site-verification" content="v20n2kQW8Afo2m4hXBQFqn0dFnqSgHJ2S2PbZVGPcWw">
 
     <style>
         * {
@@ -100,10 +102,17 @@
         }
 
         .hero p {
-            max-width: 600px;
+            max-width: 650px;
             margin: auto;
             color: #5c5149;
             font-size: 17px;
+        }
+
+        .wholesale {
+            margin-top: 18px !important;
+            font-weight: bold;
+            color: #65442d !important;
+            font-size: 16px !important;
         }
 
         .buttons {
@@ -121,6 +130,7 @@
             text-decoration: none;
             font-weight: bold;
             transition: 0.2s;
+            cursor: pointer;
         }
 
         .button-primary {
@@ -168,7 +178,7 @@
             color: #6b625b;
         }
 
-        /* PRODUCTS */
+        /* CATALOGO */
 
         .products {
             background: #fffaf4;
@@ -182,9 +192,9 @@
 
         .product-card {
             background: #f7f3ed;
-            padding: 28px;
             border: 1px solid #e5ddd2;
             border-radius: 10px;
+            overflow: hidden;
             text-align: center;
             transition: 0.2s;
         }
@@ -193,15 +203,42 @@
             transform: translateY(-3px);
         }
 
+        .product-image {
+            width: 100%;
+            height: 210px;
+            background: #e8dfd4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b7b6d;
+            font-size: 14px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 22px;
+        }
+
         .product-card h3 {
             color: #60422e;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-size: 20px;
         }
 
         .product-card p {
             color: #6b625b;
             font-size: 15px;
+        }
+
+        .more-card {
+            margin-top: 35px;
+            text-align: center;
         }
 
         /* CATERING */
@@ -221,7 +258,7 @@
             margin-bottom: 25px;
         }
 
-        /* CONTACT */
+        /* CONTACTO */
 
         .contact {
             background: #fffaf4;
@@ -286,6 +323,10 @@
             section {
                 padding: 55px 20px;
             }
+
+            .product-image {
+                height: 230px;
+            }
         }
     </style>
 </head>
@@ -318,16 +359,18 @@
 
         <div class="hero-content">
 
-            <!-- Podés agregar una imagen/logo arriba posteriormente -->
-
             <h1>Artigiano</h1>
 
             <h2>Panificados artesanales</h2>
 
             <p>
                 Productos elaborados con dedicación para acompañarte
-                en cada momento. Panificados, opciones dulces, alimentos
-                saludables y servicios de catering.
+                en cada momento. Panificados, opciones dulces y
+                servicios de catering.
+            </p>
+
+            <p class="wholesale">
+                También realizamos ventas al por mayor.
             </p>
 
             <div class="buttons">
@@ -352,7 +395,7 @@
     </section>
 
 
-    <!-- PRODUCTOS -->
+    <!-- CATALOGO COMPLETO -->
 
     <section class="products" id="productos">
 
@@ -363,64 +406,273 @@
             </h2>
 
             <p class="section-description">
-                Una selección de productos artesanales y opciones
-                pensadas para diferentes gustos y necesidades.
+                Conocé nuestra variedad de productos artesanales.
+                Consultanos por disponibilidad y ventas al por mayor.
             </p>
 
 
             <div class="product-grid">
 
+
+                <!-- ALFAJORES -->
+
                 <div class="product-card">
-                    <h3>Alfajores</h3>
-                    <p>
-                        Alfajores artesanales elaborados con dedicación.
-                    </p>
+
+                    <div class="product-image">
+                        <span>Foto de alfajores</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Alfajores artesanales</h3>
+
+                        <p>
+                            Alfajores artesanales elaborados con dedicación.
+                        </p>
+
+                    </div>
+
                 </div>
 
 
+                <!-- MEDIALUNAS -->
+
                 <div class="product-card">
-                    <h3>Sanguches de miga</h3>
-                    <p>
-                        Una opción clásica para reuniones, eventos
-                        y momentos especiales.
-                    </p>
+
+                    <div class="product-image">
+                        <span>Foto de medialunas</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Medialunas</h3>
+
+                        <p>
+                            Medialunas artesanales ideales para desayunos,
+                            meriendas y eventos.
+                        </p>
+
+                    </div>
+
                 </div>
 
 
+                <!-- PASTAFROLA -->
+
                 <div class="product-card">
-                    <h3>Ñoquis</h3>
-                    <p>
-                        Productos elaborados artesanalmente para disfrutar
-                        en casa.
-                    </p>
+
+                    <div class="product-image">
+                        <span>Foto de pastafrola</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Pastafrolas</h3>
+
+                        <p>
+                            Pastafrolas artesanales para disfrutar
+                            en cualquier momento.
+                        </p>
+
+                    </div>
+
                 </div>
 
 
+                <!-- PAN LACTAL -->
+
                 <div class="product-card">
-                    <h3>Pan árabe</h3>
-                    <p>
-                        Panificados ideales para acompañar diferentes
-                        comidas y preparaciones.
-                    </p>
+
+                    <div class="product-image">
+                        <span>Foto de pan lactal</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Pan lactal</h3>
+
+                        <p>
+                            Pan lactal artesanal para acompañar
+                            tus comidas de todos los días.
+                        </p>
+
+                    </div>
+
                 </div>
 
 
+                <!-- TARTAS -->
+
                 <div class="product-card">
-                    <h3>Alimentos saludables</h3>
-                    <p>
-                        Barras de cereal, productos con proteína,
-                        creatina y otras opciones.
-                    </p>
+
+                    <div class="product-image">
+                        <span>Foto de tartas</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Tartas</h3>
+
+                        <p>
+                            Tartas artesanales para compartir
+                            en cualquier ocasión.
+                        </p>
+
+                    </div>
+
                 </div>
 
 
+                <!-- PAN DULCE -->
+
                 <div class="product-card">
-                    <h3>Mucho más</h3>
-                    <p>
-                        Consultanos por disponibilidad y productos
-                        especiales.
-                    </p>
+
+                    <div class="product-image">
+                        <span>Foto de pan dulce</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Pan dulce</h3>
+
+                        <p>
+                            Pan dulce artesanal para disfrutar
+                            en ocasiones especiales.
+                        </p>
+
+                    </div>
+
                 </div>
+
+
+                <!-- SORRENTINOS -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span>Foto de sorrentinos</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Sorrentinos</h3>
+
+                        <p>
+                            Pasta artesanal preparada para disfrutar
+                            en casa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PIZZETAS -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span>Foto de pizzetas</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Pizzetas</h3>
+
+                        <p>
+                            Pizzetas artesanales ideales para compartir
+                            o disfrutar en cualquier momento.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BANDEJITAS -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span>Foto de bandejitas surtidas</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Bandejitas surtidas</h3>
+
+                        <p>
+                            Variedad de productos seleccionados
+                            para compartir.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PALMERITAS -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span>Foto de palmeritas</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Palmeritas</h3>
+
+                        <p>
+                            Palmeritas artesanales ideales para
+                            acompañar el mate o el café.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUDINES -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span>Foto de budines</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Budines</h3>
+
+                        <p>
+                            Budines artesanales para desayunos,
+                            meriendas y reuniones.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- CONSULTA -->
+
+            <div class="more-card">
+
+                <p class="section-description">
+                    ¿Buscás otro producto o querés realizar
+                    un pedido al por mayor?
+                </p>
+
+                <a
+                    class="button button-primary"
+                    href="https://wa.me/5491153485649"
+                    target="_blank">
+                    Consultar por WhatsApp
+                </a>
 
             </div>
 
@@ -440,8 +692,8 @@
             </h2>
 
             <p>
-                Organizá tu evento con opciones de panificados y
-                productos preparados para compartir.
+                Organizá tu evento con opciones de panificados
+                y productos preparados para compartir.
             </p>
 
             <p>
@@ -473,12 +725,13 @@
 
             <p class="section-description">
                 Estamos en General Rodríguez. Podés comunicarte
-                directamente con nosotros para realizar consultas
-                o conocer nuestros productos.
+                directamente con nosotros para realizar consultas,
+                pedidos o ventas al por mayor.
             </p>
 
 
             <div class="contact-grid">
+
 
                 <div class="contact-card">
 
@@ -517,6 +770,7 @@
 
                 </div>
 
+
             </div>
 
         </div>
@@ -536,3 +790,4 @@
 
 </body>
 </html>
+```
