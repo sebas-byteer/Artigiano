@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Artigiano | Panificados Artesanales</title>
+
+    <meta name="description" content="Artigiano - Panificados artesanales, alfajores, sanguches de miga, ñoquis, pan árabe, catering y alimentos saludables en General Rodríguez.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f3ed;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #fffaf3;
+            border-bottom: 1px solid #e5ddd2;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #5b3924;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a4038;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #9a6844;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 25px;
+            background: #eee5d8;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            color: #543522;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #76533b;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            color: #5c5149;
+            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button-primary {
+            background: #65442d;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #4d321f;
+        }
+
+        .button-secondary {
+            border: 1px solid #65442d;
+            color: #65442d;
+            background: transparent;
+        }
+
+        .button-secondary:hover {
+            background: #65442d;
+            color: white;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 70px 25px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #543522;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 40px;
+            color: #6b625b;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            background: #fffaf4;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #f7f3ed;
+            padding: 28px;
+            border: 1px solid #e5ddd2;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .product-card h3 {
+            color: #60422e;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .product-card p {
+            color: #6b625b;
+            font-size: 15px;
+        }
+
+        /* CATERING */
+
+        .catering {
+            background: #eee5d8;
+        }
+
+        .catering-content {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .catering-content p {
+            color: #5f554d;
+            margin-bottom: 25px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #fffaf4;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            border: 1px solid #e5ddd2;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            background: #f7f3ed;
+        }
+
+        .contact-card h3 {
+            color: #60422e;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: #76533b;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #543522;
+            color: #eee5d8;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .product-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Artigiano
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#catering">Catering</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- INICIO -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <!-- Podés agregar una imagen/logo arriba posteriormente -->
+
+            <h1>Artigiano</h1>
+
+            <h2>Panificados artesanales</h2>
+
+            <p>
+                Productos elaborados con dedicación para acompañarte
+                en cada momento. Panificados, opciones dulces, alimentos
+                saludables y servicios de catering.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    class="button button-primary"
+                    href="https://wa.me/5491153485649"
+                    target="_blank">
+                    Contactar por WhatsApp
+                </a>
+
+                <a
+                    class="button button-secondary"
+                    href="#productos">
+                    Ver productos
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+
+    <section class="products" id="productos">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Nuestros productos
+            </h2>
+
+            <p class="section-description">
+                Una selección de productos artesanales y opciones
+                pensadas para diferentes gustos y necesidades.
+            </p>
+
+
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <h3>Alfajores</h3>
+                    <p>
+                        Alfajores artesanales elaborados con dedicación.
+                    </p>
+                </div>
+
+
+                <div class="product-card">
+                    <h3>Sanguches de miga</h3>
+                    <p>
+                        Una opción clásica para reuniones, eventos
+                        y momentos especiales.
+                    </p>
+                </div>
+
+
+                <div class="product-card">
+                    <h3>Ñoquis</h3>
+                    <p>
+                        Productos elaborados artesanalmente para disfrutar
+                        en casa.
+                    </p>
+                </div>
+
+
+                <div class="product-card">
+                    <h3>Pan árabe</h3>
+                    <p>
+                        Panificados ideales para acompañar diferentes
+                        comidas y preparaciones.
+                    </p>
+                </div>
+
+
+                <div class="product-card">
+                    <h3>Alimentos saludables</h3>
+                    <p>
+                        Barras de cereal, productos con proteína,
+                        creatina y otras opciones.
+                    </p>
+                </div>
+
+
+                <div class="product-card">
+                    <h3>Mucho más</h3>
+                    <p>
+                        Consultanos por disponibilidad y productos
+                        especiales.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATERING -->
+
+    <section class="catering" id="catering">
+
+        <div class="catering-content">
+
+            <h2 class="section-title">
+                Servicio de catering
+            </h2>
+
+            <p>
+                Organizá tu evento con opciones de panificados y
+                productos preparados para compartir.
+            </p>
+
+            <p>
+                Consultanos para conocer las opciones disponibles
+                y armar una propuesta según tu evento.
+            </p>
+
+            <a
+                class="button button-primary"
+                href="https://wa.me/5491153485649"
+                target="_blank">
+                Consultar catering
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+
+    <section class="contact" id="contacto">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Contactanos
+            </h2>
+
+            <p class="section-description">
+                Estamos en General Rodríguez. Podés comunicarte
+                directamente con nosotros para realizar consultas
+                o conocer nuestros productos.
+            </p>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <h3>WhatsApp</h3>
+
+                    <a
+                        href="https://wa.me/5491153485649"
+                        target="_blank">
+                        +54 9 11 5348-5649
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>Instagram</h3>
+
+                    <a
+                        href="https://www.instagram.com/artigiano_panaderia/"
+                        target="_blank">
+                        @artigiano_panaderia
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>Dirección</h3>
+
+                    <p>
+                        Batallón San Nicolás de los Arroyos 80<br>
+                        General Rodríguez
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Artigiano. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+</html>
